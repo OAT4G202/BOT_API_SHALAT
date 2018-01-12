@@ -68,7 +68,7 @@ function shalat($keyword) {
 # require_once('./src/function/hard.php');
 
 //show menu, saat join dan command /menu
-if ($type == 'join' || $command == '/menu') {
+if ($type == 'join' || $command == 'Menu') {
     $text = "Assalamualaikum Kakak, aku adalah bot jadwal shalat,\n      ★EDITOR BOT★\nhttp://line.me/ti/p/~adiputra.95\nsilahkan ketik\n\nshalat •nama tempat•\n\nnanti aku bakalan kasih tahu jam berapa waktunya shalat ^_^";
     $balas = array(
         'replyToken' => $replyToken,
@@ -83,7 +83,7 @@ if ($type == 'join' || $command == '/menu') {
 
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'shalat') {
+	    if ($command == 'Shalat') {
 
         $result = shalat($options);
         $balas = array(
