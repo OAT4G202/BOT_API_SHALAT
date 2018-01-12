@@ -43,19 +43,19 @@ function shalat($keyword) {
     $response = Unirest\Request::get("$uri");
 
     $json = json_decode($response->raw_body, true);
-    $result = "Jadwal Shalat Sekitar ";
+    $result = "❴Jadwal Shalat Sekitar❵ ";
 	$result .= $json['location']['address'];
-	$result .= "\nTanggal : ";
+	$result .= "\n★Tanggal★ : ";
 	$result .= $json['time']['date'];
-	$result .= "\n\nShubuh : ";
+	$result .= "\n\n★Shubuh★ : ";
 	$result .= $json['data']['Fajr'];
-	$result .= "\nDzuhur : ";
+	$result .= "\n★Dzuhur★ : ";
 	$result .= $json['data']['Dhuhr'];
-	$result .= "\nAshar : ";
+	$result .= "\n★Ashar★ : ";
 	$result .= $json['data']['Asr'];
-	$result .= "\nMaghrib : ";
+	$result .= "\n★Maghrib★ : ";
 	$result .= $json['data']['Maghrib'];
-	$result .= "\nIsya : ";
+	$result .= "\n★Isya★ : ";
 	$result .= $json['data']['Isha'];
     return $result;
 }
@@ -69,7 +69,7 @@ function shalat($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Assalamualaikum Kakak, aku adalah bot jadwal shalat, silahkan ketik\n\n/shalat <nama tempat>\n\nnanti aku bakalan kasih tahu jam berapa waktunya shalat ^_^";
+    $text = "Assalamualaikum Kakak, aku adalah bot jadwal shalat,\n      ★EDITOR BOT★\nhttp://line.me/ti/p/~adiputra.95\nsilahkan ketik\n\nshalat •nama tempat•\n\nnanti aku bakalan kasih tahu jam berapa waktunya shalat ^_^";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -83,7 +83,7 @@ if ($type == 'join' || $command == '/menu') {
 
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == '/shalat') {
+	    if ($command == 'shalat') {
 
         $result = shalat($options);
         $balas = array(
@@ -104,7 +104,7 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Makasih Kak Stikernya ^_^'										
+										'text' => '😅belum bisa kirim sticker kk😅'										
 									
 									)
 							)
