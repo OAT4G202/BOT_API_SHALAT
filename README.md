@@ -1,12 +1,16 @@
-# Line_Bot_Shalat
+# PRANKBOTS
+editor and updater.
+By--acil
+
+# BOT LINE SHALAT
 Script Webhook Line Messaging API Use Heroku Or Other
 
-Updated V1.2 : Response a Bit Faster
+Updated V1.3 : Response a Bit Faster
 
 # Developer:
 Copyright @ Medantechno.com
 
-Modified @ Farzain - zFz
+Modified @ prankbots
 
 # Deploy to:
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
