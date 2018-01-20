@@ -103,7 +103,7 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => '(c)(i)(e)     (s)(t)(i)(c)(k)(e)(r)    (p)(a)(l)(a)(k)(a)(n)'										
+										'text' => '👶🏼ᏚᎢᏆᏟKᎬᎡ👶🏼 10Ꮯ ᏴᏌᎪNᏩ KᎬ ᏞᎪᏌᎢ😂'										
 									
 									)
 							)
