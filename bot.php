@@ -35,18 +35,6 @@ if (count($pesan_datang) > 2) {
         $options .= $pesan_datang[$i];
     }
 }
-def sendAudioWithURL(self, to_, url):
-        path = 'pythonLiness.data'
-        r = requests.get(url, stream=True)
-        if r.status_code == 200:
-            with open(path, 'w') as f:
-                shutil.copyfileobj(r.raw, f)
-        else:
-            raise Exception('Download Audio failure.')
-        try:
-            self.sendAudio(to_, path)
-        except Exception as e:
-            raise e
 #-------------------------[Function]-------------------------#
 function shalat($keyword) {
     $uri = "https://time.siswadi.com/pray/" . $keyword;
@@ -115,7 +103,7 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => '😅belum bisa kirim sticker kk😅'										
+										'text' => '(c)(i)(e)     (s)(t)(i)(c)(k)(e)(r)    (p)(a)(l)(a)(k)(a)(n)'										
 									
 									)
 							)
