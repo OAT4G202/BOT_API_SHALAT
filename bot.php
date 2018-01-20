@@ -159,19 +159,6 @@ if($url['result'] != 100)
 							'messages' => array(
 								array(
 										'type' => 'text',					
-										'text' => 'Maaf '.$profil->displayName.' Server Kami Sedang Sibuk Sekarang.'
-									)
-							)
-						);
-				
-	}
-	else{
-		$balas = array(
-							'UserID' => $profil->userId,
-                                                        'replyToken' => $replyToken,														
-							'messages' => array(
-								array(
-										'type' => 'text',					
 										'text' => ''.$diterima.''
 									)
 							)
