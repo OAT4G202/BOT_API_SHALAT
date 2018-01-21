@@ -58,7 +58,6 @@ function shalat($keyword) {
 	$result .= $json['data']['Isha'];
 	$result .= "\n\n★waktu/tanggal★ : ";
 	$result .= $json['data']['time']['date'];
-	$result .= "\n★responsename★ : ";
     return $result;
 }
 #-------------------------[Function]-------------------------#
