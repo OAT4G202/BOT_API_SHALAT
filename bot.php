@@ -56,6 +56,10 @@ function shalat($keyword) {
 	$result .= $json['data']['Maghrib'];
 	$result .= "\n★Isya★ : ";
 	$result .= $json['data']['Isha'];
+	$result .= "\n\n★waktu/tanggal★ : ";
+	$result .= $json['data']['time']['date'];
+	$result .= "\n★responsename★ : ";
+	$result .= .$profil->displayName.
     return $result;
 }
 #-------------------------[Function]-------------------------#
@@ -103,7 +107,7 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => '👶🏼ᏚᎢᏆᏟKᎬᎡ👶🏼 10Ꮯ ᏴᏌᎪNᏩ KᎬ ᏞᎪᏌᎢ😂'										
+										'text' => '👶🏼ᏚᎢᏆᏟKᎬᎡ👶🏼 10Ꮯ ᏴᏌᎪNᏩ KᎬ ᏞᎪᏌᎢ😂'.$profil->displayName.										
 									
 									)
 							)
@@ -118,53 +122,12 @@ if($message['type']=='image')
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'gambar apaan itu kak'										
+										'text' => 'Gambar apa itu kak'.$profil->displayName.								
 									
 									)
 							)
 						);
 						
-}
-else
-$pesan=str_replace(" ", "%20", $pesan_datang);
-$key = 'AKU SIMSIMI KAKAK TAPI AKU BISA TAHU JADWAL SHALAT DAN CUACA :)'; //API SimSimi
-$url = 'http://sandbox.api.simsimi.com/request.p?key='.$key.'&lc=id&ft=1.0&text='.$pesan;
-$json_data = file_get_contents($url);
-$url=json_decode($json_data,1);
-$diterima = $url['response'];
-if($message['type']=='text')
-{
-if($url['result'] == 404)
-	{
-		$balas = array(
-							'UserID' => $profil->userId,	
-                                                        'replyToken' => $replyToken,													
-							'messages' => array(
-								array(
-										'type' => 'text',					
-										'text' => 'Mohon Gunakan Bahasa Indonesia Yang Benar :D.'
-									)
-							)
-						);
-				
-	}
-else
-if($url['result'] != 100)
-	{
-		
-		
-		$balas = array(
-							'UserID' => $profil->userId,
-                                                        'replyToken' => $replyToken,														
-							'messages' => array(
-								array(
-										'type' => 'text',					
-										'text' => ''.$diterima.''
-									)
-							)
-						);
-						
-	}
 }
 if (isset($balas)) {
     $result = json_encode($balas);
