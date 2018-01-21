@@ -59,7 +59,6 @@ function shalat($keyword) {
 	$result .= "\n\n★waktu/tanggal★ : ";
 	$result .= $json['data']['time']['date'];
 	$result .= "\n★responsename★ : ";
-	$result .= .$profil->displayName.
     return $result;
 }
 #-------------------------[Function]-------------------------#
