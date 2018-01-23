@@ -1,4 +1,4 @@
-# Unirest for PHP [![Build Status][travis-image]][travis-url] [![version][packagist-version]][packagist-url]
+# PRANKBOTS for PHP [![Build Status][travis-image]][travis-url] [![version][packagist-version]][packagist-url]
 
 [![Downloads][packagist-downloads]][packagist-url]
 [![Code Climate][codeclimate-quality]][codeclimate-url]
